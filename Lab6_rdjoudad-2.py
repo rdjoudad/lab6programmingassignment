@@ -32,6 +32,9 @@ while item != "checkout":
 
     else:
         number_of_items = int(input("How many? "))
+        while number_of_items <= 0:
+            print("Invalid number.")
+            number_of_items = int(input("How many? "))
         if item in grocery_items:
             grocery_items[item] += number_of_items
         else: 
