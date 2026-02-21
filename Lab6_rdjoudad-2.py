@@ -20,6 +20,7 @@ while item != "checkout":
             print("-- YOUR CART --")
             print(f"{key}: {value}")
         print("---------------")
+        continue
 
     if item == "checkout":
         print("-- CHECKOUT FINAL CART --")
@@ -32,4 +33,6 @@ while item != "checkout":
     else:
         number_of_items = input("How many? ")
         grocery_items[item] = number_of_items
-        print(f"> {number_of_items} {item}x added to the cart.")
+        if item in grocery_items:
+            grocery_items[item] += number_of_items
+        print(f"> {number_of_items}x {item} added to the cart.")
