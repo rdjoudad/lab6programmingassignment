@@ -24,7 +24,7 @@ while item != "checkout":
 
     if item == "checkout":
         print("-- CHECKOUT FINAL CART --")
-        for key, value in grocery_items:
+        for key, value in grocery_items.items():
             print(f"{key}: {value}")
         print("---------------")
         print("Thank you for shopping with us!")
