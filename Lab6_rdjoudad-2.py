@@ -16,8 +16,8 @@ while item != "checkout":
     item = input("What would you like? ").lower().strip()
 
     if item == "view":
+        print("-- YOUR CART --")
         for key, value in grocery_items.items():
-            print("-- YOUR CART --")
             print(f"{key}: {value}")
         print("---------------")
         continue
@@ -31,7 +31,7 @@ while item != "checkout":
         break
 
     else:
-        number_of_items = input("How many? ")
+        number_of_items = int(input("How many? "))
         if item in grocery_items:
             grocery_items[item] += number_of_items
         else: 
