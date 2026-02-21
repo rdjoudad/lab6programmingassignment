@@ -31,6 +31,10 @@ while item != "checkout":
         break
 
     else:
+        if item == "":
+            print("Invalid input, please enter an item.")
+            continue
+        
         number_of_items = int(input("How many? "))
         while number_of_items <= 0:
             print("Invalid number.")
