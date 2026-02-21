@@ -13,7 +13,7 @@ print("Welcome to the store!")
 item = ""
 while item != "checkout":
     print("Enter an item, or 'view' to see your cart, or 'checkout' to finish. ")
-    item = input("What would you like? ")
+    item = input("What would you like? ").lower().strip()
 
     if item == "view":
         for key, value in grocery_items.items():
