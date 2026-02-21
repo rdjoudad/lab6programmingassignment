@@ -32,7 +32,8 @@ while item != "checkout":
 
     else:
         number_of_items = input("How many? ")
-        grocery_items[item] = number_of_items
         if item in grocery_items:
             grocery_items[item] += number_of_items
+        else: 
+            grocery_items[item] = number_of_items
         print(f"> {number_of_items}x {item} added to the cart.")
