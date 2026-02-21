@@ -10,9 +10,18 @@ grocery_items = {}
 
 print("Welcome to the store!")
 
-while input != "checkout":
-    item = input("Enter an item, or 'view' to see your cart, or 'checkout' to finish.")
-    if input == "view":
+item = ""
+while item != "checkout":
+    item = input("Enter an item, or 'view' to see your cart, or 'checkout' to finish. ")
+    number_of_items = input("How many?")
+    grocery_items[item] = number_of_items
+
+    if item == "view":
         for key, value in grocery_items:
             print(key, value)
-    
+
+    if item == "checkout":
+        for key, value in grocery_items:
+            print(key, value)
+            print("Thank you for shopping with us!")
+            break
